@@ -1,0 +1,16 @@
+.header {
+    padding-top: 26px;
+    &__nav {
+      @include flexbox(space-between, center);
+      margin-bottom: 56px;
+    }
+}
+
+.logo {
+    width: 79px;
+    height: 32px;
+    @media (min-width:768px) {
+        width: 126px;
+        height: 46px;
+    }
+}

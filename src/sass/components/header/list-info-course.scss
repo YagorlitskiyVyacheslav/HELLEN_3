@@ -1,0 +1,9 @@
+.list-info-course {
+    @include flexbox();
+}
+.list-info-course__icon {
+    width: 56px;
+    height: 56px;
+    border: 2px solid rgb(255, 107, 8);
+    @include flexbox(center, center)
+}

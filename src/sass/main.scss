@@ -1,6 +1,12 @@
 /*
  * Все паршалы импортировать в этот файл
  */
+@import "helpers/mixin.scss";
 
 @import 'normalize.scss';
 @import 'base.scss';
+
+@import "components/header/header-nav.scss";
+@import "components/header/burger.scss";
+@import "components/header/_free-lesson.scss";
+@import "components/header/list-info-course.scss";
