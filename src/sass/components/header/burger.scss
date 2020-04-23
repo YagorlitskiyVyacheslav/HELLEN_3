@@ -2,18 +2,26 @@
     @include flexbox($align-items: center);
 }
 .burger {
+    @extend %cursor-pointer;
+    @include transition()
+
+    &:hover {
+        transform: scale(1.2);
+    }
+
     @media (min-width: 1280px) {
         display: none;
     }
-}
-.burger__line {
-    display: block;
-    width: 24px;
-    height: 2px;
-    background-color: #000;
 
-    &:not(:last-child) {
+    &__line {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background-color: $light-dark-color;
+
+      &:not(:last-child) {
         margin-bottom: 3px;
+      }
     }
 }
 .site-navigation {
@@ -22,19 +30,19 @@
         @include flexbox(space-between, center);
         &__item {
           margin-right: 44px;
+          cursor: pointer;
         }
 
         &__link {
             font-size: 14px;
-            font-family: "Tahoma";
-            color: rgb(185, 185, 185);
-            font-weight: bold;
+            @include tahoma-bold;
+            color: $gray-color;
             text-transform: uppercase;
             @include transition();
             
             &:hover,
             &:focus {
-                color: rgb(255, 107, 8);
+                color: $primary-color;
             }
         }
     }
@@ -42,15 +50,15 @@
 }
 .header__button-cons {
     display: none;
+    @extend %cursor-pointer;
     @media (min-width: 768px) {
         display: block;
         padding: 22px;
         font-size: 11px;
-        font-family: "Tahoma", sans-serif;
-        color: rgb(255, 107, 8);
-        font-weight: 700;
+        @include tahoma-bold;
+        color: $primary-color;
         text-transform: uppercase;
-        border: 2px solid rgb(255, 107, 8);
+        border: 2px solid $primary-color;
         background: transparent;
     }
     @media (min-width: 768px) and (max-width: 1279px) {

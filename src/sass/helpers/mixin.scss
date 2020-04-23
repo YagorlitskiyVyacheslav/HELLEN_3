@@ -1,14 +1,8 @@
-@mixin background($url, $urlx2, $size, $position, $repeat) {
+@mixin background($url, $size: cover, $position: top center, $repeat: no-repeat) {
   background-image: url($url);
   background-size: $size;
   background-position: $position;
   background-repeat: $repeat;
-
-  @media (-webkit-min-device-pixel-ratio: 2),
-  (-o-min-device-pixel-ratio: 2/1),
-  (min-resolution: 192dpi) {
-    background-image: url($urlx2);
-  }
 }
 
 @mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
@@ -32,4 +26,11 @@
   align-items: $align-items;
   flex-wrap: $flex-wrap;
   flex-direction: $flex-direction;
+}
+
+//  Font 
+
+@mixin tahoma-bold {
+  font-family: "Tahoma", sans-serif;
+  font-weight: 700;
 }
