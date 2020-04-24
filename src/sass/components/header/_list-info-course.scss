@@ -92,6 +92,10 @@
   }
   &--310 {
     max-width: 310px;
+    @media (min-width: 1680px) {
+      min-width: 310px;
+      max-width: 310px;
+    }
   }
   &--250 {
     max-width: 250px;

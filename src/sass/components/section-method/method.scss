@@ -7,17 +7,48 @@
         text-align: center;
     }
     &__list {
-        margin: 38px -5px 53px -5px;
+        margin: 38px 0 53px;
+        @media (min-width: 768px) {
+        	@include flexbox(center);
+        }
     }
 }
 .method__item {
 	box-shadow: 4px 6px 23px 8px $shadow-color;
 	text-align: center;
-	padding: 30px 20px 25px;
+    padding: 30px 20px 25px;
+    width: 280px;
 
-	&:not(:last-child) {
-		margin-bottom: 16px;
-	}
+    @media (max-width: 767px) {
+        margin: 0 -5px;
+        &:not(:last-child) {
+        	margin-bottom: 16px;
+        }
+    }
+    @media (min-width: 768px) {
+        width: 290px;
+    }
+    @media (min-width: 768px) and (max-width: 1279px) {
+    	&:nth-child(2n+1) {
+    		margin-right: 20px;
+        }
+        &:not(:nth-last-child(-n+2)) {
+        	margin-bottom: 16px;
+        }
+    }
+    @media (min-width: 1280px) {
+        width: 390px;
+        &:not(:nth-child(3n)) {
+        	margin-right: 20px;
+        }
+
+        &:not(:nth-last-child(-n+3)) {
+        	margin-bottom: 16px;
+        }
+    }
+    @media (min-width: 1680px) {
+    	width: 430px;
+    }
 
 	& svg {
 		fill: $primary-color;
@@ -36,13 +67,25 @@
             @include position(absolute,  $bottom: -20px, $left: 50%);
             transform: translateX(-50%);
         }
+        @media (min-width: 1280px) {
+        	font-size: 18px;
+        }
+        @media (min-width: 1680px) {
+        	font-size: 21px;
+        }
 	}
 
 	&-desc {
 		font-size: 11px;
 		@extend %montserrat-reg;
 		color: $gray-color;
-		line-height: 1.8;
+        line-height: 1.8;
+        @media (min-width: 1280px) {
+        	font-size: 15px;
+        }
+        @media (min-width: 1280px) {
+        	font-size: 19px;
+        }
     }
     &:hover {
         box-shadow: none;
