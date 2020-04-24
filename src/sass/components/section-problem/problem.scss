@@ -1,5 +1,5 @@
 .problem {
-    position: relative;
+    @include position(relative);
     padding-top: 50px;
     @media (min-width: 768px) {
     	padding-top: 60px;
@@ -16,7 +16,7 @@
         z-index: 1;
         width: 100vw;
         height: 519px;
-        background-color: rgb(17, 21, 23);
+        background-color: $light-dark-color;
         @media (min-width: 768px){
                 height: 333px;
                 @include background("../images/fire.png", $size: 210px 297px, $position: right bottom);
@@ -31,7 +31,7 @@
         }
     }
     &__wraper {
-        position: relative;
+        @include position(relative);
         z-index: 2;
     }
     &__title {
@@ -57,10 +57,10 @@
     }
 }
 .problem__list {
-    background-color: white;
+    background-color: $white-color;
     padding: 20px 30px 30px 30px;
     counter-reset: problem 00;
-    box-shadow: 4px 6.928px 15.54px 5.46px rgba(29, 29, 27, 0.04);
+    box-shadow: 4px 6.928px 15.54px 5.46px $shadow-color;
     margin-bottom: 70px;
     @media (min-width: 768px) {
         @include flexbox(space-between);
@@ -86,14 +86,8 @@
         color: $primary-color;
     }
     &::after {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 8px;
-        left: 0;
-        background-color: rgb(255, 107, 8);
-        width: 25px;
-        height: 2px;
+        @extend %before-line;
+        @include position(absolute, $top: 8px, $left: 0);
     }
     &:not(:last-child) {
         margin-bottom: 20px;

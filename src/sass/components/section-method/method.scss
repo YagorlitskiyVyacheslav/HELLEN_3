@@ -1,0 +1,65 @@
+.method {
+    &__title {
+        font-size: 20px;
+        @extend %montserrat-bold;
+        color: $light-dark-color;
+        line-height: 1.65;
+        text-align: center;
+    }
+    &__list {
+        margin: 38px -5px 53px -5px;
+    }
+}
+.method__item {
+	box-shadow: 4px 6px 23px 8px $shadow-color;
+	text-align: center;
+	padding: 30px 20px 25px;
+
+	&:not(:last-child) {
+		margin-bottom: 16px;
+	}
+
+	& svg {
+		fill: $primary-color;
+	}
+
+	&-title {
+		font-size: 13px;
+		@extend %montserrat-bold;
+		color: $light-dark-color;
+        line-height: 1.5;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        @include position(relative);
+        &::before {
+            @extend %before-line;
+            @include position(absolute,  $bottom: -20px, $left: 50%);
+            transform: translateX(-50%);
+        }
+	}
+
+	&-desc {
+		font-size: 11px;
+		@extend %montserrat-reg;
+		color: $gray-color;
+		line-height: 1.8;
+    }
+    &:hover {
+        box-shadow: none;
+        color: $white-color;
+        background-color: $primary-color;
+        & svg {
+        	fill: $white-color;
+        }
+        .method__item-title {
+        	color: $white-color;
+        }
+        .method__item-title::before {
+        	background-color: $white-color;
+        }
+        .method__item-desc {
+        	color: $white-color;
+        }
+
+    }
+}

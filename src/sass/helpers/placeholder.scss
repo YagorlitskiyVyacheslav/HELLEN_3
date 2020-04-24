@@ -31,3 +31,10 @@
   font-weight: 700;
 }
 
+%before-line {
+  content: "";
+  display: block;
+  background-color: $primary-color;
+  width: 25px;
+  height: 2px;
+}
