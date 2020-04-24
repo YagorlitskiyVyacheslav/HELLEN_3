@@ -1,16 +1,21 @@
 /*
  * Все паршалы импортировать в этот файл
  */
-@import "font";
+@import '_font.scss';
 
-@import "helpers/variables";
-@import "helpers/placeholder";
-@import "helpers/mixin";
+ @import "helpers/variables";
+ @import "helpers/placeholder";
+ @import "helpers/mixin";
 
-@import 'normalize';
-@import 'base';
+ @import 'normalize';
+ @import 'base';
 
-@import "components/header/header";
-@import "components/header/burger.scss";
-@import "components/header/free-lesson";
-@import "components/header/list-info-course";
+//  HEADER
+ @import "components/header/_header";
+ @import "components/header/burger.scss";
+ @import "components/header/free-lesson";
+ @import "components/header/_list-info-course";
+
+//  SECTION PROBLEM
+
+@import "components/section-problem/problem.scss"

@@ -19,11 +19,13 @@ const css = () => {
     .pipe(plumber())
     .pipe(mode.development(sourcemaps.init()))
     .pipe(
-      sass({
+      sass(
+        {
         sourceMap: true,
         precision: 3,
         errLogToConsole: true,
-      }).on('error', sass.logError),
+      }
+      ).on('error', sass.logError),
     )
     .pipe(mode.production(gcmq()))
     .pipe(

@@ -11,6 +11,7 @@
     }
     &__nav {
       @include flexbox(space-between, center);
+      @extend %cursor-pointer;
       margin-bottom: 56px;
     }
 }
