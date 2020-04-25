@@ -34,32 +34,38 @@
         @include position(relative);
         z-index: 2;
     }
-    &__title {
-        font-size: 20px;
-        @extend %montserrat-bold;
-        color: $white-color;
-        line-height: 1.5;
-
-        &-span {
-            color: $primary-color;
-        }
-        @media (min-width: 768px) {
-        	width: 50%;
-        }
-        @media (min-width: 1280px) {
-            width: 65%;
-            font-size: 42px;
-        }
-        @media (min-width: 1680px) {
-        	width: 65%;
-        	font-size: 46px;
-        }
-    }
 }
-.problem__list {
+.counter-list__title {
+    font-size: 20px;
+    margin: 0 0 20px;
+	@extend %montserrat-bold;
+	color: $white-color;
+	line-height: 1.5;
+	&-span {
+		color: $primary-color;
+	}
+
+	@media (min-width: 768px) {
+        width: 50%;
+        margin: 0 0 22px;
+	}
+
+	@media (min-width: 1280px) {
+		width: 65%;
+        font-size: 42px;
+        margin: 0 0 48px;
+	}
+
+	@media (min-width: 1680px) {
+		width: 65%;
+        font-size: 46px;
+        margin: 0 0 62px;
+	}
+}
+.counter-list {
     background-color: $white-color;
     padding: 20px 30px 30px 30px;
-    counter-reset: problem 00;
+    counter-reset: problem;
     box-shadow: 4px 6.928px 15.54px 5.46px $shadow-color;
     margin-bottom: 70px;
     @media (min-width: 768px) {
@@ -71,12 +77,12 @@
     	padding: 55px 105px 50px 100px;
     }
 }
-.problem__item {
+.counter-list__item {
     font-size: 13px;
     @extend %montserrat-bold;
     color: $light-dark-color;
     line-height: 1.5;
-    counter-increment: problem 01;
+    counter-increment: problem;
     position: relative;
     &::before {
         display: block;
