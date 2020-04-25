@@ -16,7 +16,7 @@
         z-index: 1;
         width: 100vw;
         height: 519px;
-        background-color: $light-dark-color;
+        background-color: $dark-bg-color;
         @media (min-width: 768px){
                 height: 333px;
                 @include background("../images/fire.png", $size: 210px 297px, $position: right bottom);
