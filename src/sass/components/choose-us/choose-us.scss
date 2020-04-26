@@ -1,0 +1,28 @@
+.choose-us {
+    &__wraper {
+        @include position(relative);
+        &--positioning {
+            @include position(absolute, $top: -392px, $left: 0);
+            @media (min-width: 768px) {
+                top:  -192px;
+            }
+            @media (min-width: 1280px) {
+            	top: -435px;
+            }
+            @media (min-width: 1680px) {
+            	top: -300px;
+            }
+        }
+    }
+    &__title {
+        width: 50%;
+        @media (min-width: 768px) {
+            text-align: center;
+            width: 100%;
+        }
+        
+    }
+    &__list {
+        margin-bottom: 44px;
+    }
+}

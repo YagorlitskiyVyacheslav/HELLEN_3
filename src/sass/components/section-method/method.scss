@@ -1,15 +1,30 @@
 .method {
     &__title {
         font-size: 20px;
-        @extend %montserrat-bold;
+        @extend %montserrat-exbold;
         color: $light-dark-color;
         line-height: 1.65;
         text-align: center;
+        @media (min-width: 768px) {
+        	font-size: 26px;
+        }
+        @media (min-width: 1280px) {
+        	font-size: 42px;
+        }
+        @media (min-width: 1680px) {
+        	font-size: 46px;
+        }
     }
     &__list {
         margin: 38px 0 53px;
         @media (min-width: 768px) {
-        	@include flexbox(center);
+            @include flexbox(center);
+        }
+        @media (min-width: 1280px) {
+        	margin: 45px 0 100px;
+        }
+        @media (min-width: 1280px) {
+        	margin: 50px 0 130px;
         }
     }
 }
