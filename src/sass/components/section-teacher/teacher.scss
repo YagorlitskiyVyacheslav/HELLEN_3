@@ -1,4 +1,16 @@
 .teacher {
+    padding-bottom: 50px;
+     @media (min-width: 768px) {
+     	padding-bottom: 55px;
+     }
+
+     @media (min-width: 1280px) {
+     	padding-bottom: 90px;
+     }
+
+     @media (min-width: 1680px) {
+     	padding-bottom: 135px;
+     }
     &__title {
         font-size: 20px;
         @extend %montserrat-bold;
@@ -18,10 +30,26 @@
         	margin-bottom: 50px;
         }
     }
+    &__wraper {
+        @include flexbox();
+    }
+    &__info {
+        @media (min-width: 768px) {
+            flex-basis: 397px;
+            margin-left: 44px;
+        }
 
+        @media (min-width: 1280px) {
+            flex-basis: 602px;
+            margin-left: 91px;
+        }
+        @media (min-width: 1680px) {
+        	flex-basis: 660px;
+        }
+    }
     &__name {
         font-size: 16px;
-        @extend %montserrat-bold;
+        @extend %montserrat-exbold;
         color: $dark-bg-color;
         line-height: 1.8;
         @media (max-width: 767px) {;
@@ -29,7 +57,7 @@
         }
         @media (min-width: 768px) {
         	font-size: 20px;
-            margin: 0 0 6px;
+            margin: -8px 0 6px;
             
         }
         @media (min-width: 1280px) {
@@ -49,9 +77,16 @@
         color: $dark-bg-color;
         padding-left: 36px;
         padding-bottom: 19px;
+        @media (min-width: 1280px) {
+            font-size: 17px;
+            padding-bottom: 28px;
+            padding-left: 45px;
+        }
         &::before {
             content: url(../images/sprite/check.svg);
             @include position(absolute, $top: 0, $left: 0);
+            width: 20px;
+            display: block;
         }
     }
     &__education {
@@ -60,21 +95,33 @@
         color: $second-gray-color;
         line-height: 1.8;
         margin: 0 0 15px;
+        @media (min-width: 1280px) {
+            font-size: 17px;
+            margin: 0 0 28px;
+        }
     }
     &__link-certificate {
         font-size: 11px;
-        font-family: "Montserrat";
-        color: rgb(255, 107, 8);
-        padding-left: 10px;
-        margin-bottom: 50px;
+        @extend %montserrat-reg;
+        color: $primary-color;
+        @media (min-width: 1280px) {
+        	font-size: 17px;
+        	margin: 0 0 28px;
+        }
     }
 }
 .wraper-education {
     position: relative;
-    padding: 20px 0 0 10px;
+    padding-top: 20px;
+    @media (max-width:767px) {
+        padding-left: 10px;
+    }
 
     &::before {
     	@extend %before-line;
-    	@include position(absolute, $top: 0, $left: 10px);
+        @include position(absolute, $top: 0, $left: 10px);
+        @media (min-width: 768px) {
+            left: 0;
+        }
     }
 }

@@ -34,3 +34,29 @@
   font-family: "Tahoma", sans-serif;
   font-weight: 700;
 }
+
+@mixin list_item_line($inleft, $border-line) {
+	&:not(:last-child)::after {
+		content: "";
+		display: block;
+		background-color: $gray-color;
+		@include position(absolute, $top: 0, $left: $inleft);
+		height: 100%;
+		border-left: $border-line;
+		z-index: 1;
+	}
+
+	&:first-child::after {
+		transform: translateY(10px);
+	}
+
+	&:last-child::after {
+		content: "";
+		display: block;
+		background-color: $gray-color;
+		border-left: $border-line;
+		@include position(absolute, $top: 0, $left: $inleft);
+		height: 10px;
+    z-index: 1;
+	}
+}
