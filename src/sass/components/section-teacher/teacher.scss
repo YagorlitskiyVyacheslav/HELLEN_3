@@ -4,7 +4,7 @@
         @extend %montserrat-bold;
         color: $dark-bg-color;
         line-height: 1.5;
-        margin-bottom: 20px;
+        margin: 0 0 20px;
         @media (min-width: 768px) {
             font-size: 26px;
             margin-bottom: 29px;
@@ -41,20 +41,40 @@
         border-top: 1px solid $gray-color;
         padding-top: 25px;
         @include position(relative);
-        &:before {
-            @extend %before-line;
-            @include position(absolute, $bottom: 0, $left: 36px);
-        }
     }
     &__exp-step {
+        position: relative;
         font-size: 13px;
         @extend %montserrat-bold;
         color: $dark-bg-color;
         padding-left: 36px;
         padding-bottom: 19px;
         &::before {
-            content: url(../images/sprite/fire.svg);
+            content: url(../images/sprite/check.svg);
+            @include position(absolute, $top: 0, $left: 0);
         }
     }
+    &__education {
+        font-size: 11px;
+        @extend %montserrat-reg;
+        color: $second-gray-color;
+        line-height: 1.8;
+        margin: 0 0 15px;
+    }
+    &__link-certificate {
+        font-size: 11px;
+        font-family: "Montserrat";
+        color: rgb(255, 107, 8);
+        padding-left: 10px;
+        margin-bottom: 50px;
+    }
+}
+.wraper-education {
+    position: relative;
+    padding: 20px 0 0 10px;
 
+    &::before {
+    	@extend %before-line;
+    	@include position(absolute, $top: 0, $left: 10px);
+    }
 }
