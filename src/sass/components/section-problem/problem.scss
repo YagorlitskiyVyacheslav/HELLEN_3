@@ -67,7 +67,7 @@
     background-color: $white-color;
     padding: 20px 30px 30px 30px;
     counter-reset: problem;
-    box-shadow: 4px 6.928px 15.54px 5.46px $shadow-color;
+    box-shadow: 4px 7px 16px 6px $shadow-color;
     margin-bottom: 70px;
     @media (min-width: 768px) {
         @include flexbox(space-between);

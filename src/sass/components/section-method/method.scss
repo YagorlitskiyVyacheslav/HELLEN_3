@@ -33,7 +33,7 @@
 	text-align: center;
     padding: 30px 20px 25px;
     width: 280px;
-
+    @include transition();
     @media (max-width: 767px) {
         margin: 0 -5px;
         &:not(:last-child) {
@@ -66,7 +66,8 @@
     }
 
 	& svg {
-		fill: $primary-color;
+        fill: $primary-color;
+        @include transition();
 	}
 
 	&-title {
@@ -77,7 +78,9 @@
         margin-top: 20px;
         margin-bottom: 40px;
         @include position(relative);
+        @include transition();
         &::before {
+            @include transition();
             @extend %before-line;
             @include position(absolute,  $bottom: -20px, $left: 50%);
             transform: translateX(-50%);
@@ -91,6 +94,7 @@
 	}
 
 	&-desc {
+        @include transition();
 		font-size: 11px;
 		@extend %montserrat-reg;
 		color: $gray-color;
