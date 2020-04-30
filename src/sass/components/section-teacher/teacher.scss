@@ -83,9 +83,11 @@
             padding-left: 45px;
         }
         &::before {
-            content: url(../images/sprite/check.svg);
+            content: "";
+            background-image: url(../images/sprite/check.svg);
             @include position(absolute, $top: 0, $left: 0);
             width: 20px;
+            height: 20px;
             display: block;
         }
     }
