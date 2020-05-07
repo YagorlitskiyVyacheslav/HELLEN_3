@@ -83,6 +83,7 @@
 
     &__button {
       @extend %button-free-lesson;
+      @extend %cursor-pointer;
 
       @media (max-width: 767px) {
         margin: 0 auto 35px;

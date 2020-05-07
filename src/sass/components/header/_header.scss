@@ -1,12 +1,12 @@
 .header {
     &__bg {
         padding-top: 26px;
-        @include background("/images/header-bg-320.jpg", $size: 100% 100%);
+        @include background("../images/header-bg-320.jpg", $size: 100% 100%);
         @media (min-width:768px) {
-          @include background("/images/header-bg-768.jpg", $size: 100% 100%);
+          @include background("../images/header-bg-768.jpg", $size: 100% 100%);
         }
         @media (min-width:1280px) {
-          @include background("/images/header-bg-1280.jpg", $size: 100% 100%);
+          @include background("../images/header-bg-1280.jpg", $size: 100% 100%);
         }
     }
     &__nav {
